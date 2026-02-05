@@ -31,16 +31,16 @@ Un **Data Analyst Copilot** développé en **Python + Streamlit**, entièrement 
 ## 🖥️ Aperçu de l'application
 
 ### Interface principale
-![UI 1](images/data-analyst-copilot-pro-01.png)
+![UI 1](data-analyst-copilot-pro-01.png)
 
 ### Analyse des données
-![UI 2](images/data-analyst-copilot-pro-02.png)
+![UI 2](data-analyst-copilot-pro-02.png)
 
 ### Visualisation
-![UI 3](images/data-analyst-copilot-pro-03.png)
+![UI 3](data-analyst-copilot-pro-03.png)
 
 ### Données de simulation
-![Simulation](images/data-simul.png)
+![Simulation](data-simul.png)
 
 ---
 
