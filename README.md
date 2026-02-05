@@ -1,31 +1,78 @@
-# Data Analyst Copilot 🚀
+# 🚀 Data Analyst Copilot
 
-MVP d'application Streamlit pour l'analyse automatisée de données.
+Un **Data Analyst Copilot** développé en **Python + Streamlit**, entièrement **dockerisé** et **automatisé avec Jenkins (CI/CD)**.
 
-## Fonctionnalités
-- Import CSV/XLSX ou copier-coller.
-- Profiling complet (statistiques, corrélations, manquants).
-- Visualisations interactives avec Plotly.
-- Analyse KPI et tendances.
-- Segmentation par Clustering (K-Means).
-- Détection d'anomalies (Isolation Forest).
-- Générateur de requêtes SQL.
-- Export de rapports HTML et datasets nettoyés.
+👉 Le projet fonctionne **à l’identique sur Windows, macOS et Linux** grâce à Docker.
 
-## Installation
-1. Créer un environnement virtuel : `python -m venv .venv`
-2. Activer l'environnement : 
-   - Windows : `.venv\Scripts\activate`
-   - Mac/Linux : `source .venv/bin/activate`
-3. Installer les dépendances : `pip install -r requirements.txt`
-4. Lancer l'app : `streamlit run app.py`
+---
 
-## Prérequis
-- Installer Docker Desktop (Windows/Mac) ou Docker Engine (Linux)
-- Vérifier :
-  - `docker --version`
-  - `docker compose version`
+## 🎯 Objectif du projet
 
-## Lancer l'app (recommandé)
+- Fournir une interface simple pour :
+  - Analyser des datasets (CSV, Excel, Parquet)
+  - Visualiser des données
+  - Explorer des statistiques
+- Garantir un déploiement reproductible sur tous les environnements
+- Mettre en place une pipeline CI/CD professionnelle
+
+---
+
+## 🧠 Fonctionnalités
+
+- 📊 Analyse de données (Pandas, NumPy)
+- 📈 Visualisations interactives (Plotly, Streamlit)
+- 📁 Import CSV / Excel / Parquet
+- 🐳 Lancement en un clic avec Docker
+- 🔁 Pipeline CI/CD automatisée avec Jenkins
+- ✅ Smoke test automatique du container Streamlit
+
+---
+
+## 🖥️ Aperçu de l'application
+
+### Interface principale
+![UI 1](images/data-analyst-copilot-pro-01.png)
+
+### Analyse des données
+![UI 2](images/data-analyst-copilot-pro-02.png)
+
+### Visualisation
+![UI 3](images/data-analyst-copilot-pro-03.png)
+
+### Données de simulation
+![Simulation](images/data-simul.png)
+
+---
+
+## 🧰 Technologies utilisées
+
+### 🔹 Data & Backend
+- Python 3.11
+- Pandas
+- NumPy
+- Scikit-learn
+- PyArrow / FastParquet
+- OpenPyXL
+
+### 🔹 Frontend
+- Streamlit
+- Plotly
+- Altair
+
+### 🔹 DevOps & CI/CD
+- Docker
+- Dockerfile
+- Jenkins
+- Jenkins Pipeline (Declarative)
+- Docker Network (tests inter-containers)
+- Curl (smoke test)
+- Git & GitHub
+
+---
+
+## 🐳 Lancer le projet avec Docker (recommandé)
+
+### 1. Cloner le projet
 ```bash
-docker compose up --build
+git clone https://github.com/SALAHmdk/data-analyst-copilot.git
+cd data-analyst-copilot
