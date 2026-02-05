@@ -19,23 +19,26 @@ pipeline {
       }
     }
 
-    stage("Run container (smoke test)") {
-      steps {
-        sh '''
-          docker rm -f ${APP_NAME} || true
+   stage("Run container (smoke test)") {
+  steps {
+    sh '''
+      set -e
+      docker network create jenkins-net >/dev/null 2>&1 || true
 
-          # Map host port dynamically to avoid conflicts (0 chooses a free port)
-          docker run -d --name ${APP_NAME} -p 0:8501 ${IMAGE_NAME}
+      docker rm -f ${APP_NAME} >/dev/null 2>&1 || true
 
-          sleep 8
+      # Lance l'app sur un réseau Docker dédié (pas besoin de publier un port)
+      docker run -d --name ${APP_NAME} --network jenkins-net ${IMAGE_NAME}
 
-          PORT=$(docker port ${APP_NAME} 8501/tcp | sed 's/.*://')
-          echo "Streamlit mapped to host port: $PORT"
+      # Attendre un peu
+      sleep 10
 
-          curl -fsS "http://localhost:${PORT}/_stcore/health" || curl -fsS "http://localhost:${PORT}/" || true
-        '''
-      }
-    }
+      # Test depuis un conteneur curl dans le même réseau (ça marche toujours)
+      docker run --rm --network jenkins-net curlimages/curl:8.6.0 \
+        -fsS http://${APP_NAME}:8501/_stcore/health
+    '''
+  }
+}
 
     stage("Stop container") {
       steps {
