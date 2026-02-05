@@ -69,7 +69,7 @@ Un **Data Analyst Copilot** développé en **Python + Streamlit**, entièrement 
 - Git & GitHub
 ![jenkins](jenkins.png)
 ![docker](docker.png)
-![git](git.png)
+![git](git .png)
 ---
 
 ## 🐳 Lancer le projet avec Docker (recommandé)
