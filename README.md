@@ -19,3 +19,13 @@ MVP d'application Streamlit pour l'analyse automatisée de données.
    - Mac/Linux : `source .venv/bin/activate`
 3. Installer les dépendances : `pip install -r requirements.txt`
 4. Lancer l'app : `streamlit run app.py`
+
+## Prérequis
+- Installer Docker Desktop (Windows/Mac) ou Docker Engine (Linux)
+- Vérifier :
+  - `docker --version`
+  - `docker compose version`
+
+## Lancer l'app (recommandé)
+```bash
+docker compose up --build
