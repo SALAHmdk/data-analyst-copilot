@@ -72,27 +72,20 @@ Un **Data Analyst Copilot** développé en **Python + Streamlit**, entièrement 
 ![git](images/git.png)
 ---
 
-## 🐳 Lancer le projet avec Docker (recommandé)
+## 🚀 Lancer le projet avec Docker
 
-### 1. Cloner le projet
 ```bash
 git clone https://github.com/SALAHmdk/data-analyst-copilot.git
 cd data-analyst-copilot
-
-### 2. Construire l’image Docker
+1. Construire l’image Docker
 docker build -t data-analyst-copilot .
-
-### 3. Lancer le container
+2. Lancer le container
 docker run -p 8501:8501 data-analyst-copilot
-
-
-### 👉 Ouvre ensuite :
+👉 Ouvre ensuite
 http://localhost:8501
 
-### 🔄 CI/CD avec Jenkins
-
-### La pipeline Jenkins :
-
+🔄 CI/CD avec Jenkins
+Pipeline Jenkins
 Clone le repo GitHub
 
 Build l’image Docker
@@ -103,10 +96,9 @@ Vérifie la santé de l’application (/_stcore/health)
 
 Stoppe et nettoie le container
 
-📄 Pipeline définie dans le fichier Jenkinsfile.
+📄 Pipeline définie dans le fichier Jenkinsfile
 
-### ✅ Pourquoi ce projet est portable
-
+✅ Pourquoi ce projet est portable
 Aucun prérequis Python local
 
 Aucun souci de version
@@ -115,7 +107,6 @@ Docker garantit le même comportement partout
 
 Jenkins valide automatiquement chaque commit
 
-### 👤 Auteur
-
+👤 Auteur
 Salah Mohand Kaci
 Projet Data / DevOps – CI/CD avec Python / Docker & Jenkins
